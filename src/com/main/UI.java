@@ -9,7 +9,7 @@ public class UI extends JFrame {
 	String[] letters = {"a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"};
 	JComboBox letterSelect = new JComboBox(letters);
 	JButton chooseLetter = new JButton("Select");
-	JLabel wordReveal = new JLabel();
+	JLabel wordReveal = new JLabel("Word");
 	JLabel attempts = new JLabel("Lives left: 9");
 	
 	public UI(){
@@ -29,8 +29,9 @@ public class UI extends JFrame {
 		wordContainer.add(attempts);
 		add(letterContainer);
 		add(wordContainer);
+		chooseLetter.addActionListener(even);
 		setVisible(true);
-		this.revalidate();
+		
 		
 	}
 }

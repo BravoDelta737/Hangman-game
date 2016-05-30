@@ -3,6 +3,7 @@ package com.main;
 public class GameLogic {
 	static String word = "baboon";
 	static String[] solvedWord = new String[word.length()];
+	static char[] displayWord = new char[word.length()];
 	int[] letterIndex = new int[word.length()];
 	public static int lives = 9;
 	static boolean isPlaying = true;
@@ -17,7 +18,7 @@ public class GameLogic {
 			}
 		}
 		
-		if(isFound){
+		if(isFound == true){
 			//Do nothing
 		}else{
 			lives--;
@@ -25,14 +26,21 @@ public class GameLogic {
 		return isFound;
 	}
 	
-	public static void displayFound(){
+	public static String displayFound(){
+		String foundWord;
 		for(int i = 0; i < solvedWord.length; i++){
 			if(solvedWord[i] == null){
-				System.out.print("_");
+				displayWord[i] = '_';
 			}else{
-				System.out.print(solvedWord[i]);
+			displayWord[i] = solvedWord[i].charAt(0); 
 				
 			}
 		}
+		foundWord = new String(displayWord);
+		return foundWord;
+	}
+	
+	public static int returnLives(){
+		return lives;
 	}
 }
