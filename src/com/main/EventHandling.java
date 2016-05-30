@@ -13,5 +13,10 @@ public class EventHandling implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
-	}
+		GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
+		gui.letterSelect.remove(gui.letterSelect.getSelectedIndex());
+		GameLogic.displayFound();
+		
 }
+	}
+
