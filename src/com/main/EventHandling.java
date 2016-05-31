@@ -15,11 +15,7 @@ public class EventHandling implements ActionListener {
 		boolean isTrue = GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
 		int index = gui.letterSelect.getSelectedIndex();
 		int lives = GameLogic.lives;
-		if(isTrue == true){
-			//Do nothing
-		}else{
-			GameLogic.subtractLife();
-		}
+		
 		String livesString = Integer.toString(lives);
 		gui.letterSelect.removeItemAt(index);
 		gui.wordReveal.setText(GameLogic.displayFound());
