@@ -13,9 +13,14 @@ public class EventHandling implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
-		GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
+		boolean isTrue = GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
 		int index = gui.letterSelect.getSelectedIndex();
 		int lives = GameLogic.lives;
+		if(isTrue == true){
+			//Do nothing
+		}else{
+			lives--;
+		}
 		String livesString = Integer.toString(lives);
 		gui.letterSelect.removeItemAt(index);
 		gui.wordReveal.setText(GameLogic.displayFound());

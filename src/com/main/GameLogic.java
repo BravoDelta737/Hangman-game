@@ -17,12 +17,6 @@ public class GameLogic {
 				//Do nothing
 			}
 		}
-		
-		if(isFound == true){
-			//Do nothing
-		}else{
-			lives--;
-		}
 		return isFound;
 	}
 	
