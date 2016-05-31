@@ -13,7 +13,12 @@ public class EventHandling implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 		
-		GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
+		boolean isRight = GameLogic.checkLetter(gui.letterSelect.getSelectedItem().toString());
+		if(isRight == false){
+			GameLogic.lives--;
+		}else{
+			
+		}
 		int index = gui.letterSelect.getSelectedIndex();
 		int lives = GameLogic.lives;
 		String livesString = Integer.toString(lives);

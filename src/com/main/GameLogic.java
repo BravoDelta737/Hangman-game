@@ -18,10 +18,10 @@ public class GameLogic {
 			}
 		}
 		
-		if(isFound == true){
-			//Do nothing
+		if(isFound == false){
+			
 		}else{
-			lives--;
+			
 		}
 		return isFound;
 	}
