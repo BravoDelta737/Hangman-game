@@ -25,6 +25,7 @@ public class UI extends JFrame {
 		letterContainer.add(letterSelect);
 		letterContainer.add(chooseLetter);
 		wordContainer.setLayout(flo2);
+		wordReveal.setFont(new Font("Serif", Font.PLAIN, 20));
 		wordContainer.add(wordReveal);
 		wordContainer.add(attempts);
 		add(letterContainer);

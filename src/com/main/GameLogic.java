@@ -1,9 +1,9 @@
 package com.main;
 
 public class GameLogic {
-	static String word = "airplane";
+	public static String word = "syntax";
 	static String[] solvedWord = new String[word.length()];
-	static char[] displayWord = new char[word.length()];
+	static char[] displayWord = new char[word.length()	];
 	int[] letterIndex = new int[word.length()];
 	public static int lives = 9;
 	static boolean isPlaying = true;
@@ -33,6 +33,7 @@ public class GameLogic {
 		for(int i = 0; i < solvedWord.length; i++){
 			if(solvedWord[i] == null){
 				displayWord[i] = '_';
+				
 			}else{
 			displayWord[i] = solvedWord[i].charAt(0); 
 				
