@@ -1,7 +1,7 @@
 package com.main;
 
 public class GameLogic {
-	static String word = "baboon";
+	static String word = "airplane";
 	static String[] solvedWord = new String[word.length()];
 	static char[] displayWord = new char[word.length()];
 	int[] letterIndex = new int[word.length()];
@@ -13,16 +13,12 @@ public class GameLogic {
 		for(int i = 0; i < word.length(); i++){
 			if(object.charAt(0) == word.charAt(i)){
 				solvedWord[i] = object;
+				isFound = true;
 			}else{
 				//Do nothing
 			}
 		}
-		
-		if(isFound == false){
-			
-		}else{
-			
-		}
+
 		return isFound;
 	}
 	
@@ -42,5 +38,9 @@ public class GameLogic {
 	
 	public static int returnLives(){
 		return lives;
+	}
+	
+	public static void subtractLife(){
+		lives--;
 	}
 }
